@@ -12,5 +12,30 @@
 &emsp;&emsp;上图包含文字、坐标轴、曲线、点等内容。整幅图像是一个Figure对象，它也是最大的Artist对象，由诸多次级Artist对象复合得到。Figure对象包含Axes对象，这是我们的绘图命令直接作用的对象。Axes对象则包括图片的各种次级Artist对象，如标题属于Text对象，背景属于Patch对象，线条属于Line2D对象，图例属于Legend对象，x轴和y轴属于Xaxis和Yaxis对象等。它们的关系如下图所示：
 ![](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/figure3.png)
 
+&emsp;&emsp;关于上文提到的`plt.plot()`和`ax.plot()`，在介绍了图形的构成元素后，不难明白它们的联系。pyplot会检测脚本内部数据结构来查看是否存在当前Figure实例。如果存在，则提取当前Axes对象，并将绘图行为导向Axes.scatter的API调用。若脚本中不存在Figure实例，则会生成一个Figure与Axes，并将它们设为当前值，然后将绘图行为导向Axes.scatter。**我们提倡在绘图前先预设Axes对象，这是绘制复杂图像的良好习惯。**
+
+* 不指定Axes对象，让pyplot自动创建。
+
+```
+fig1=plt.figure()
+plt.scatter(x,y)
+plt.title('Scatter')
+plt.show()
+```
+* 指定Axes对象
+
+```
+fig2=plt.figure()
+ax=fig2.add_subplot(111)
+ax.scatter(x,y)
+ax.set_title('Scatter')
+plt.show()
+```
+
+&emsp;&emsp;两段代码对单张图像的绘制效果完全一致（见下图）。但在绘制多子图时，就需要为每个子图分配Axes对象。所以再次强调：**提倡在绘图前先预设Axes对象！**
+
+![](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/2019-04-19%20(4).png)
+
 &emsp;&emsp;数据可视化的过程，就是将经过组织的数据根据某种绘制方法转换为Artist对象，并按照合适的顺序组织这些Artist对象的过程。我们在下一节讨论这个话题。
 ## 可视化一般流程
+
