@@ -9,6 +9,8 @@
 
 ![](https://matplotlib.org/_images/anatomy1.png)
 
-&emsp;&emsp;如上图所示，
+&emsp;&emsp;上图包含文字、坐标轴、曲线、点等内容。整幅图像是一个Figure对象，它也是最大的Artist对象，由诸多次级Artist对象复合得到。Figure对象包含Axes对象，这是我们的绘图命令直接作用的对象。Axes对象则包括图片的各种次级Artist对象，如标题属于Text对象，背景属于Patch对象，线条属于Line2D对象，图例属于Legend对象，x轴和y轴属于Xaxis和Yaxis对象等。它们的关系如下图所示：
+![](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/figure3.png)
 
+&emsp;&emsp;数据可视化的过程，就是将经过组织的数据根据某种绘制方法转换为Artist对象，并按照合适的顺序组织这些Artist对象的过程。我们在下一节讨论这个话题。
 ## 可视化一般流程
