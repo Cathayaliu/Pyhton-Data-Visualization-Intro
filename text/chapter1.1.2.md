@@ -3,4 +3,12 @@
 
 ## 图形的构成元素
 
+&emsp;&emsp;Matplotlib API包含三层逻辑架构。自底向上分别为后端层，美工层（Artist）和脚本层（pyplot）。后端层中封装了FigureCanvas、Renderer和Event等接口，分别代表绘图表面、绘图动作和绘图事件。**我们的文档一般不涉及这层。**美工层封装了各种Artist对象，这些对象经过组合构成了最终的图形。**这是我们重点关注的部分。**脚本层是对Matplotlib的更高级封装，较为易读，面向非专业场合，但对复杂图形的灵活性欠佳。**我们提倡使用面向Artist对象的方式画图**。
+
+&emsp;&emsp;首先，我们对一幅图所包含的Artist对象做简单介绍。
+
+![](https://matplotlib.org/_images/anatomy1.png)
+
+&emsp;&emsp;如上图所示，
+
 ## 可视化一般流程
