@@ -1,9 +1,11 @@
-# Pyhton数据可视化导论
+# 漫谈Pyhton数据可视化
 ![](https://matplotlib.org/_static/logo2.png)
+
 这是一份基于Python-Matplotlib模块的数据可视化介绍。
 
 _Cathaya Liu_
 
+***
 ## 1&emsp;技术
 ### 1.1&emsp;关于Matplotlib
 * &emsp;[准备工作](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.1.1.md)
