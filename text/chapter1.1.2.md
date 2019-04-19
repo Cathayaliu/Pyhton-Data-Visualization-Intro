@@ -39,7 +39,7 @@ plt.show()
 &emsp;&emsp;数据可视化的过程，就是将经过组织的数据根据某种绘制方法转换为Artist对象，并按照合适的顺序组织这些Artist对象的过程。我们在下一节讨论这个话题。
 ## 可视化一般流程
 
-&emsp;&emsp;根据上面介绍的Artist对象关系，自顶向下，即可得到数据可视化的一般流程：
+&emsp;&emsp;根据上面介绍的Artist对象关系，自顶向下，即可得到数据可视化的一般流程。对于有多个子图的复杂图形，对每个Axes对象均需重复1-6步：
 
 ![](http://upload-images.jianshu.io/upload_images/13614507-841afa8cc90fde22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/699)
 
