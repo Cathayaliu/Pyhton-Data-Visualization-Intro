@@ -1,4 +1,5 @@
 # Pyhton数据可视化导论
+![](https://matplotlib.org/_static/logo2.png)
 这是一份基于Python-Matplotlib模块的数据可视化介绍。
 
 _Cathaya Liu_
