@@ -5,8 +5,8 @@ _Cathaya Liu_
 
 ## 1&emsp;技术
 ### 1.1&emsp;关于Matplotlib
-* &emsp;准备工作
-* &emsp;图元介绍
+* &emsp;[准备工作](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.1.1.md)
+* &emsp;[图元介绍](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.1.2.md)
 ### 1.2&emsp;基本平面可视化样式
 * &emsp;散点图
 * &emsp;折线图
