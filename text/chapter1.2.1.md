@@ -23,7 +23,7 @@ ax.set_ylabel('Y data') #为Axis对象添加y轴标签
 
 &emsp;&emsp;它会生成如下图所示的散点图。
 
-![A simple scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20simple%20scatter.png)
+![A simple scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/color_str.png)
 
 &emsp;&emsp;注意，我使用了`numpy`的`random`模块随机生成了x坐标和y坐标的数据。这意味着每次运行代码得到的图像不会相同，不要惊慌，这是正常现象。
 
@@ -52,3 +52,26 @@ markers = {'.': 'point', ',': 'pixel', 'o': 'circle', 'v': 'triangle_down', '^':
 * alpha
 
 &emsp;&emsp;这个参数用来改变散点的透明度。`alpha=0`代表这个点完全透明。`alpha=1`代表完全不透明。你可以传入介于0和1之间的值。
+
+## 小结
+&emsp;&emsp;最后，我们再来画张图，总结一下上面的内容。绘制代码如下：
+
+```
+#引入模块
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.random.randn(100)
+y=np.random.randn(100)
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.scatter(x,y,s=30*(x*x+y*y),color='skyblue',alpha=0.9) #画图，点的大小等于其距离原点的距离乘以30，颜色为天蓝色，透明度为0.9
+ax.scatter(x,y,s=30*(x*x+y*y),color='blue',alpha=0.5,marker='*') #画图，大小同上，颜色为蓝色，透明度为0.5，形状为星形
+ax.set_title('A beautiful scatter')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+```
+&emsp;&emsp;最终效果图：
+![A beautiful scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20beautiful%20scatter.png)
+
