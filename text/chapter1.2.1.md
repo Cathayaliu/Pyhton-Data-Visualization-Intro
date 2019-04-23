@@ -23,7 +23,7 @@ ax.set_ylabel('Y data') #为Axis对象添加y轴标签
 
 &emsp;&emsp;它会生成如下图所示的散点图。
 
-![A simple scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/color_str.png)
+![A simple scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20simple%20scatter.png)
 
 &emsp;&emsp;注意，我使用了`numpy`的`random`模块随机生成了x坐标和y坐标的数据。这意味着每次运行代码得到的图像不会相同，不要惊慌，这是正常现象。
 
@@ -39,7 +39,7 @@ ax.set_ylabel('Y data') #为Axis对象添加y轴标签
 
 &emsp;&emsp;显然这个参数可以改变散点的颜色。你可以传入一个颜色描述字符串，比如`color='skyblue'`，或是一个三元RGB组，比如`color=(0.5,0.8,0.7)`。当然，也可以是16进制的颜色标号，比如`color=#AABBCC`。你可以在下图找到更多颜色描述字符串的信息。
 
-![颜色字符串](https://images2015.cnblogs.com/blog/682463/201611/682463-20161130140039052-1274666212.png)
+![颜色字符串](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/color_str.png)
 
 * marker
 
@@ -73,5 +73,6 @@ ax.set_xlabel('X data')
 ax.set_ylabel('Y data')
 ```
 &emsp;&emsp;最终效果图：
+
 ![A beautiful scatter](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20beautiful%20scatter.png)
 
