@@ -11,8 +11,8 @@ _Cathaya Liu_
 * &emsp;[准备工作](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.1.1.md)
 * &emsp;[图元介绍](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.1.2.md)
 ### 1.2&emsp;基本平面可视化样式
-* &emsp;散点图
-* &emsp;折线图
+* &emsp;[散点图](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.2.1.md)
+* &emsp;[折线图](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/text/chapter1.2.2.md)
 * &emsp;柱状图
 * &emsp;饼图
 ### 1.3&emsp;基本立体可视化样式
