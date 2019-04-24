@@ -68,7 +68,7 @@ ax.set_xlabel('X data')
 ax.set_ylabel('Y data')
 ```
 
-
+![A heap bar](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20heap%20bar.png)
 
 * 复合条形图
 &emsp;&emsp;复合条形图同样需要提供多组`height`参数，但它改变的是每组条形图的`x`坐标。实现代码如下：
@@ -95,7 +95,7 @@ ax.set_title('A multi bar')
 ax.set_xlabel('X data')
 ax.set_ylabel('Y data')
 ```
-
+![A multi bar](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20multi%20bar.png)
 
 ## 小结
 &emsp;&emsp;条形图的绘制非常灵活。通过改变`height`与`bottom`以及`x`参数，可以绘制出多变的效果。
@@ -124,3 +124,4 @@ ax.set_xlabel('X data')
 ax.set_ylabel('Y data')
 ```
 
+![A complex bar](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20complex%20bar.png)
