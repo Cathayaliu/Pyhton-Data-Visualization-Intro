@@ -72,6 +72,33 @@ ax.set_ylabel('Y data')
 
 ![A smooth plot](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20smooth%20plot.png)
 
+&emsp;&emsp;上面的代码有几个点需要说明一下。首先`x_new`的范围从(0,20)变成了(0,19)的原因是，`x`数组中包含的元素为`[0,1,2,...,18,19]`而不是`[0,1,2,...,19,20]`。我们使用`x`和`y`数组的数据创建插值函数，因此这个函数只能处理(0,19)范围内的数据，传入的`x_new`范围自然是(0,19)。其次，创建插值函数语句的`kind=cubic`是插值类型的一种。还有最邻近插值、线性插值等方法。如果对这个部分感兴趣，请自行google，毕竟这不是数学教材。
+
 ## 小结
+&emsp;&emsp;小结部分依然是综合运用上面介绍的知识画图，代码如下：
 
+```import matplotlib.pyplot as plt
+import numpy as np
+import scipy
 
+x=np.arange(0,20,1)
+y=np.random.randn(20)
+
+#平滑化部分
+x_new=np.arange(0,19,0.1)
+func=scipy.interpolate.interp1d(x, y, kind='cubic')
+y_new=func(x_new)
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.plot(x,y,lw=2.5,color='violet') #原始数据线，线宽2.5，颜色为紫色
+ax.plot(x_new,y_new,lw=2.5,color='slategray',ls='-.',alpha=0.5) #平滑化曲线，线宽2.5，颜色为铅灰，线形点划线，透明度0.5
+ax.set_title('A complex plot')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+
+```
+
+&emsp;&emsp;最终效果图：
+
+![](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20complex%20plot.png)
