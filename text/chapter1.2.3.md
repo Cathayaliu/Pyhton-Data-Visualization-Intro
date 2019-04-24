@@ -46,7 +46,81 @@ ax.set_ylabel('Y data')
 
 ## 几种绘制技巧
 
+* 堆积条形图
+&emsp;&emsp;通过提供多组`height`参数，将每组数据生成的图元堆叠到上一组数据的顶端，即可得到堆积条形图。实现代码如下：
 
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.arange(0,10,1)
+height1=np.abs(np.random.randn(10))
+height2=np.abs(np.random.randn(10))
+height3=np.abs(np.random.randn(10))
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.bar(x,height=height1)
+ax.bar(x,height=height2,bottom=height1)
+ax.bar(x,height=height3,bottom=height1+height2)
+ax.set_title('A heap bar')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+```
+
+
+
+* 复合条形图
+&emsp;&emsp;复合条形图同样需要提供多组`height`参数，但它改变的是每组条形图的`x`坐标。实现代码如下：
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.arange(0,10,1)
+height1=np.abs(np.random.randn(10))
+height2=np.abs(np.random.randn(10))
+height3=np.abs(np.random.randn(10))
+
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+width=0.6
+num=3
+width=width/num
+ax.bar(x-width,height=height1,width=width)
+ax.bar(x,height=height2,width=width)
+ax.bar(x+width,height=height3,width=width)
+ax.set_title('A multi bar')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+```
 
 
 ## 小结
+&emsp;&emsp;条形图的绘制非常灵活。通过改变`height`与`bottom`以及`x`参数，可以绘制出多变的效果。
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.arange(0,10,1)
+height1=np.abs(np.random.randn(10))
+height2=np.abs(np.random.randn(10))
+height3=np.abs(np.random.randn(10))
+height4=np.abs(np.random.randn(10))
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+width=0.6
+num=2
+width=width/num
+ax.barh(x-width/2,width=height1,height=width,edgecolor='black')
+ax.barh(x-width/2,width=height2,height=width,left=height1,edgecolor='black')
+ax.barh(x+width/2,width=height3,height=width,left=-height3/2,edgecolor='black')
+ax.barh(x+width/2,width=height4,height=width,left=height3/2,edgecolor='black')
+ax.set_title('A complex bar')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+```
+
