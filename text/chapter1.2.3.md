@@ -21,7 +21,7 @@ ax.set_ylabel('Y data')
 
 &emsp;&emsp;绘制结果如下：
 
-![A simple bar]()
+![A simple bar](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20simple%20bar.png)
 
 &emsp;&emsp;将`bar()`改为`barh()`，即可得到横置条形图。请读者自行尝试。
 
