@@ -43,7 +43,35 @@ ax.set_ylabel('Y data')
 |':'|虚线|
 
 ## 使用插值法绘制平滑曲线
+&emsp;&emsp;在数据量较少的时候，折线图会有非常强硬的“转折”（这就是它名字的由来吧www）。如果想要获得平滑的曲线，一个直观的想法就是增加数据量。通过`scipy`模块的`interpolate`函数，我们可以在两个数据点之间插入根据数学方法生成的数值，从而使曲线平滑化。
 
+&emsp;&emsp;使用插值法绘制折线图的代码如下：
 
+```
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy #这个模块用来实现插值
+
+x=np.arange(0,20,1)
+y=np.random.randn(20)
+
+x_new=np.arange(0,19,0.1) #注意这里的范围从（0，20）变为（0，19）
+func=scipy.interpolate.interp1d(x, y, kind='cubic') #使用x和y的数据，创造一个插值函数，插值类型为3阶B样条曲线
+y_new=func(x_new) #使用插值函数，传入x_new的数据，得到插值后的y_new数据
+
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.plot(x_new,y_new) #使用新数据画图
+ax.set_title('A smooth plot')
+ax.set_xlabel('X data')
+ax.set_ylabel('Y data')
+```
+&emsp;&emsp;未经插值和插值后的效果见下图：
+
+![A hard plot](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20hard%20plot.png)
+
+![A smooth plot](https://github.com/Cathayaliu/Pyhton-Data-Visualization-Intro/blob/master/picture/chapter%201/A%20smooth%20plot.png)
 
 ## 小结
+
+
